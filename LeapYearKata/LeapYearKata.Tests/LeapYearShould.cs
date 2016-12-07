@@ -21,6 +21,14 @@ namespace LeapYearKata.Tests
 
             isLeapYear.Should().BeFalse();
         }
+        
+        [Test]
+        public void ReturnFalse_WhenVerifyingLeapYears_Given9AsYear()
+        {
+            var isLeapYear = leapYearVerifier.IsLeapYear(9);
+
+            isLeapYear.Should().BeFalse();
+        }
 
         [TestCase(4)]
         [TestCase(40)]
