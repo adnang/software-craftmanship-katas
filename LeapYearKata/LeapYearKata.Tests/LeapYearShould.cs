@@ -16,6 +16,7 @@ namespace LeapYearKata.Tests
         
         [TestCase(1)]
         [TestCase(9)]
+        [TestCase(10)]
         public void ReturnFalse_WhenVerifyingLeapYears_GivenNotMultiplesOf4AsYear(int year)
         {
             var isLeapYear = leapYearVerifier.IsLeapYear(year);
@@ -25,6 +26,7 @@ namespace LeapYearKata.Tests
 
         [TestCase(4)]
         [TestCase(40)]
+        [TestCase(160)]
         public void ReturnTrue_WhenVerifyingLeapYears_GivenAMultipleOf4AsYear(int year)
         {
             var isLeapYear = leapYearVerifier.IsLeapYear(year);
