@@ -15,7 +15,7 @@ namespace LeapYearKata.Tests
         }
 
         [Test]
-        public void ReturnFalse_WhenVerifyingLeapYears_Given1AsLeapYear()
+        public void ReturnFalse_WhenVerifyingLeapYears_Given1AsYear()
         {
             var isLeapYear = leapYearVerifier.IsLeapYear(1);
 
@@ -23,10 +23,18 @@ namespace LeapYearKata.Tests
         }
 
         [Test]
-        public void ReturnTrue_WhenVerifyingLeapYears_Given4AsLeapYear()
+        public void ReturnTrue_WhenVerifyingLeapYears_Given4AsYear()
         {
             var isLeapYear = leapYearVerifier.IsLeapYear(4);
             
+            isLeapYear.Should().BeTrue();
+        }
+
+        [Test]
+        public void ReturnTrue_WhenVerifyingLeapYears_Given40AsYear()
+        {
+            var isLeapYear = leapYearVerifier.IsLeapYear(40);
+
             isLeapYear.Should().BeTrue();
         }
     }
