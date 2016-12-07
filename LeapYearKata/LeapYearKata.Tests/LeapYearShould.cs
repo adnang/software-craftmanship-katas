@@ -16,12 +16,4 @@ namespace LeapYearKata.Tests
             isLeapYear.Should().BeFalse();
         }
     }
-
-    public class LeapYear
-    {
-        public bool IsLeapYear(int year)
-        {
-            return false;
-        }
-    }
 }
