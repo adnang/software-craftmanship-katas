@@ -13,19 +13,12 @@ namespace LeapYearKata.Tests
         {
             leapYearVerifier = new LeapYear();
         }
-
-        [Test]
-        public void ReturnFalse_WhenVerifyingLeapYears_Given1AsYear()
-        {
-            var isLeapYear = leapYearVerifier.IsLeapYear(1);
-
-            isLeapYear.Should().BeFalse();
-        }
         
-        [Test]
-        public void ReturnFalse_WhenVerifyingLeapYears_Given9AsYear()
+        [TestCase(1)]
+        [TestCase(9)]
+        public void ReturnFalse_WhenVerifyingLeapYears_GivenNotMultiplesOf4AsYear(int year)
         {
-            var isLeapYear = leapYearVerifier.IsLeapYear(9);
+            var isLeapYear = leapYearVerifier.IsLeapYear(year);
 
             isLeapYear.Should().BeFalse();
         }
