@@ -4,14 +4,10 @@
     {
         public bool IsLeapYear(int year)
         {
-            if (year == 100)
+            if (IsMultipleOf100(year))
+            {
                 return false;
-
-            if (year == 200)
-                return false;
-
-            if (year == 300)
-                return false;
+            }
 
             if (IsMultipleOf4(year))
             {
@@ -19,6 +15,11 @@
             }
 
             return false;
+        }
+
+        private static bool IsMultipleOf100(int year)
+        {
+            return year % 100 == 0;
         }
 
         private static bool IsMultipleOf4(int year)
