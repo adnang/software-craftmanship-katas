@@ -46,9 +46,10 @@ namespace LeapYearKata.Tests
 
         [TestCase(400)]
         [TestCase(800)]
+        [TestCase(1600)]
         public void ReturnTrue_WhenVerifyingLeapYears_GivenMultipleOf400(int year)
         {
-            var isLeapYear = leapYearVerifier.IsLeapYear(800);
+            var isLeapYear = leapYearVerifier.IsLeapYear(year);
 
             isLeapYear.Should().BeTrue();
         }

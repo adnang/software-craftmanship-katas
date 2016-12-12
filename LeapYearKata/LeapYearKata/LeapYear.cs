@@ -14,6 +14,11 @@
                 return true;
             }
 
+            if (year == 1600)
+            {
+                return true;
+            }
+
             if (IsMultipleOf100(year))
             {
                 return false;
