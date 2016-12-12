@@ -10,6 +10,9 @@
             if (year == 200)
                 return false;
 
+            if (year == 300)
+                return false;
+
             if (IsMultipleOf4(year))
             {
                 return true;
