@@ -5,10 +5,10 @@
         public bool IsLeapYear(int year)
         {
             return IsMultipleOf4(year) 
-                && EitherMultipleOf400ButNot100(year);
+                && EitherMultipleOf400OrNot100(year);
         }
 
-        private static bool EitherMultipleOf400ButNot100(int year)
+        private static bool EitherMultipleOf400OrNot100(int year)
         {
             return IsMultipleOf400(year) || !IsMultipleOf100(year);
         }
