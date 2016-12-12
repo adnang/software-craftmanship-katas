@@ -36,7 +36,7 @@ namespace LeapYearKata.Tests
 
         [TestCase(100)]
         [TestCase(200)]
-        [TestCase(300)]
+        [TestCase(1100)]
         public void ReturnFalse_WhenVerifyingLeapYears_GivenMultipleOf100ButNot400(int year)
         {
             var isLeapYear = leapYearVerifier.IsLeapYear(year);
