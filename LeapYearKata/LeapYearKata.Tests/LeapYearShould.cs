@@ -34,10 +34,11 @@ namespace LeapYearKata.Tests
             isLeapYear.Should().BeTrue();
         }
 
-        [Test]
-        public void ReturnFalse_WhenVerifyingLeapYears_GivenMultipleOf100ButNot400()
+        [TestCase(100)]
+        [TestCase(200)]
+        public void ReturnFalse_WhenVerifyingLeapYears_GivenMultipleOf100ButNot400(int year)
         {
-            var isLeapYear = leapYearVerifier.IsLeapYear(100);
+            var isLeapYear = leapYearVerifier.IsLeapYear(year);
 
             isLeapYear.Should().BeFalse();
         }
