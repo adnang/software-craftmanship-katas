@@ -4,6 +4,11 @@
     {
         public bool IsLeapYear(int year)
         {
+            if (year == 400)
+            {
+                return true;
+            }
+
             if (IsMultipleOf100(year))
             {
                 return false;

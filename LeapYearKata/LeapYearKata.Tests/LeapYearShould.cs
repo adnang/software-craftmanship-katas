@@ -13,7 +13,7 @@ namespace LeapYearKata.Tests
         {
             leapYearVerifier = new LeapYear();
         }
-        
+
         [TestCase(1)]
         [TestCase(9)]
         [TestCase(10)]
@@ -42,6 +42,14 @@ namespace LeapYearKata.Tests
             var isLeapYear = leapYearVerifier.IsLeapYear(year);
 
             isLeapYear.Should().BeFalse();
+        }
+
+        [Test]
+        public void ReturnTrue_WhenVerifyingLeapYears_GivenMultipleOf400()
+        {
+            var isLeapYear = leapYearVerifier.IsLeapYear(400);
+
+            isLeapYear.Should().BeTrue();
         }
     }
 }
